@@ -6,6 +6,7 @@ log/
 !**/src/main/**
 !**/src/test/**
 docker/mysql/data
+.DS_Store
 
 ### STS ###
 .apt_generated
