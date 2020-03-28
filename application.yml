@@ -6,7 +6,7 @@ spring:
   profiles: localhost
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/todo_db
+    url: jdbc:mysql://localhost:3306/todo_db?character_set_server=utf8mb4
     username: user
     password: password
   jpa:
@@ -22,7 +22,7 @@ spring:
   profiles: docker
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://dbserver/todo_db
+    url: jdbc:mysql://dbserver/todo_db?character_set_server=utf8mb4
     username: user
     password: password
   jpa:
