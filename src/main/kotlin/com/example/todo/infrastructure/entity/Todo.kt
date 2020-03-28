@@ -3,7 +3,6 @@ package com.example.todo.infrastructure.entity
 import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.UpdateTimestamp
 import java.time.LocalDateTime
-import java.util.*
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
@@ -12,7 +11,7 @@ import javax.persistence.Id
 class Todo(
 
         @Id
-        val id: UUID,
+        val id: String?,
 
         var content: String,
 
@@ -21,9 +20,9 @@ class Todo(
 
         @Column(name = "created_at")
         @CreationTimestamp
-        val createdAt: LocalDateTime,
+        val createdAt: LocalDateTime?,
 
         @Column(name = "updated_at")
         @UpdateTimestamp
-        val updatedAt: LocalDateTime
+        val updatedAt: LocalDateTime?
 )
