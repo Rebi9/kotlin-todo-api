@@ -1,4 +1,4 @@
-package com.example.todo.presentation
+package com.example.todo.presentation.controller
 
 import com.example.todo.application.service.TodoRecordService
 import com.example.todo.presentation.reaponse.TodoResponder
