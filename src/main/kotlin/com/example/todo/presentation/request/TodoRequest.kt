@@ -1,3 +1,5 @@
 package com.example.todo.presentation.request
 
-class TodoRequest(val content: String, val isDone: Boolean)
+import org.hibernate.validator.constraints.Length
+
+class TodoRequest(@field:Length(max = 100)val content: String, val isDone: Boolean)
