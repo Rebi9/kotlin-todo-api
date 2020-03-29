@@ -1,4 +1,4 @@
-package com.example.todo.presentation
+package com.example.todo.presentation.controller
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
