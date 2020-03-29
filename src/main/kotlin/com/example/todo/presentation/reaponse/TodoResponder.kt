@@ -14,4 +14,11 @@ class TodoResponder {
                 todo.updatedAt
         )
     }
+
+    fun response(todoList: List<Todo>) : MutableList<TodoResponse> {
+        val todoResponseList : MutableList<TodoResponse> = mutableListOf()
+        todoList.stream().forEach{ todo -> todoResponseList.add(respond(todo))}
+
+        return todoResponseList
+    }
 }
