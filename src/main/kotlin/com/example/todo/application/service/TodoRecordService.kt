@@ -15,8 +15,8 @@ class TodoRecordService (private val todoRepository: TodoRepository) {
 
     fun update(request: TodoRequest, id: String): Todo {
         val targetEntity = todoRepository.findById(id).orElseThrow()
-        targetEntity.content = request.content;
-        targetEntity.isDone = request.isDone;
+        targetEntity.content = request.content
+        targetEntity.isDone = request.isDone
         return todoRepository.save(targetEntity)
     }
 }
