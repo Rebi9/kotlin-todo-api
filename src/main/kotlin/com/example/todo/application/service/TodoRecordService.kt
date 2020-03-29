@@ -19,4 +19,9 @@ class TodoRecordService (private val todoRepository: TodoRepository) {
         targetEntity.isDone = request.isDone
         return todoRepository.save(targetEntity)
     }
+
+    fun delete(id: String) {
+        val targetEntity = todoRepository.findById(id).orElseThrow()
+        todoRepository.delete(targetEntity)
+    }
 }
