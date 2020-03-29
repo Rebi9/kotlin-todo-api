@@ -10,4 +10,8 @@ class TodoQueryService(private val todoRepository: TodoRepository) {
     fun findById(id: String): Todo {
         return todoRepository.findById(id).orElseThrow()
     }
+
+    fun findAll(): List<Todo> {
+        return todoRepository.findAll()
+    }
 }
