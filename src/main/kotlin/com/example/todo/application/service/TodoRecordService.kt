@@ -12,4 +12,11 @@ class TodoRecordService (private val todoRepository: TodoRepository) {
         val todoEntity = Todo(UUID.randomUUID().toString(), request.content, request.isDone, null, null)
         return todoRepository.save(todoEntity)
     }
+
+    fun update(request: TodoRequest, id: String): Todo {
+        val targetEntity = todoRepository.findById(id).orElseThrow()
+        targetEntity.content = request.content;
+        targetEntity.isDone = request.isDone;
+        return todoRepository.save(targetEntity)
+    }
 }
