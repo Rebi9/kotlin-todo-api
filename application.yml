@@ -1,6 +1,8 @@
 spring:
   profiles:
     active: localhost
+  jackson:
+    property-naming-strategy: SNAKE_CASE
 ---
 spring:
   profiles: localhost
