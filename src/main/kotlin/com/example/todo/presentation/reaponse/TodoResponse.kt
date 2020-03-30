@@ -11,11 +11,11 @@ class TodoResponse(
         @JsonProperty("is_done")
         val isDone: Boolean,
 
-        @JsonProperty("crated_At")
+        @JsonProperty("created_at")
         @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
         val createdAt: LocalDateTime?,
 
-        @JsonProperty("updated_At")
+        @JsonProperty("updated_at")
         @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
         val updatedAt: LocalDateTime?
 )
